@@ -65,7 +65,7 @@ def match_resume_to_jd(resume_text, jd_text, temperature=0.3):
 if __name__ == "__main__":
     from file_reader import extract_text
 
-    resume_text = extract_text("sample_resumes\\LChakka_CV_Antare.pdf")
+    resume_text = extract_text("sample_resumes\\sample_resume.txt")
 
     print("Paste the job description below.")
     print(

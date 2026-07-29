@@ -26,5 +26,5 @@ def extract_text(file_path):
 
 
 if __name__ == "__main__":
-    text = extract_text("sample_resumes\\LChakka_CV_Antare.pdf")
+    text = extract_text("sample_resumes\\sample_resume.txt")
     print(text)

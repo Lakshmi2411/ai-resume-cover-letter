@@ -63,6 +63,6 @@ def review_resume(resume_text, temperature=0.3):
 if __name__ == "__main__":
     from file_reader import extract_text
 
-    resume_text = extract_text("sample_resumes\\LChakka_CV_Antare.pdf")
+    resume_text = extract_text("sample_resumes\\sample_resume.txt")
     result = review_resume(resume_text)
     print(json.dumps(result, indent=2))

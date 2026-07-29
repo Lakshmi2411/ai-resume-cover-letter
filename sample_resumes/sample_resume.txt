@@ -1,0 +1,38 @@
+John Doe
+Backend Software Engineer
+Email: john.doe.dev@example.com | Phone: (555) 123-4567
+Location: Remote
+
+PROFESSIONAL SUMMARY
+Backend software engineer with 4 years of experience building scalable cloud-based
+systems. Skilled in Python, AWS, and event-driven architectures. Passionate about
+writing clean, testable code and collaborating in agile teams.
+
+TECHNICAL SKILLS
+- Languages: Python, JavaScript, SQL
+- Cloud: AWS (Lambda, S3, DynamoDB, SQS, SNS, EventBridge, API Gateway)
+- Frameworks: Flask, FastAPI
+- Testing: Pytest, Behave
+- Tools: Docker, Git, GitHub Actions, CloudWatch
+
+PROFESSIONAL EXPERIENCE
+
+Software Engineer | TechCorp Solutions | 2022 - Present
+- Built and maintained microservices handling 50,000+ daily requests using Python
+  and AWS Lambda
+- Designed event-driven pipelines using SQS and EventBridge to decouple services
+- Reduced API response latency by 25% through caching and query optimization
+- Collaborated with cross-functional teams in an agile/scrum environment
+- Wrote unit and integration tests using Pytest, maintaining 85%+ code coverage
+
+Junior Developer | StartupHub Inc. | 2021 - 2022
+- Developed internal tools in Python to automate manual reporting tasks
+- Assisted in migrating a monolithic application to a microservices architecture
+- Participated in code reviews and contributed to internal documentation
+
+EDUCATION
+B.Tech in Computer Science
+Example University, 2021
+
+CERTIFICATIONS
+- AWS Certified Developer – Associate
