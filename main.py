@@ -2,7 +2,12 @@ from file_reader import extract_text
 from resume_reviewer import review_resume
 from jd_matcher import match_resume_to_jd
 from resume_rewriter import rewrite_resume, save_resume_as_docx, make_resume_filename
-from cover_letter_generator import generate_cover_letter, extract_name_and_company, make_filename, save_as_docx
+from cover_letter_generator import (
+    generate_cover_letter,
+    extract_name_and_company,
+    make_filename,
+    save_as_docx,
+)
 import json
 
 
@@ -53,7 +58,9 @@ def main():
             print("\n--- Tailored Resume ---\n")
             print(updated_resume)
             extracted = extract_name_and_company(resume_text, jd_text)
-            resume_filename = make_resume_filename(extracted["candidate_name"], extracted["company_name"])
+            resume_filename = make_resume_filename(
+                extracted["candidate_name"], extracted["company_name"]
+            )
             save_resume_as_docx(updated_resume, resume_filename)
 
         elif choice == "4":
@@ -61,7 +68,9 @@ def main():
             print("\n--- Generated Cover Letter ---\n")
             print(letter)
             extracted = extract_name_and_company(resume_text, jd_text)
-            filename = make_filename(extracted["candidate_name"], extracted["company_name"])
+            filename = make_filename(
+                extracted["candidate_name"], extracted["company_name"]
+            )
             save_as_docx(letter, filename)
 
         elif choice == "5":
@@ -73,14 +82,18 @@ def main():
             print("\n--- Tailored Resume ---\n")
             print(updated_resume)
             resume_extracted = extract_name_and_company(resume_text, jd_text)
-            resume_filename = make_resume_filename(resume_extracted["candidate_name"], resume_extracted["company_name"])
+            resume_filename = make_resume_filename(
+                resume_extracted["candidate_name"], resume_extracted["company_name"]
+            )
             save_resume_as_docx(updated_resume, resume_filename)
 
             letter = generate_cover_letter(resume_text, jd_text)
             print("\n--- Generated Cover Letter ---\n")
             print(letter)
             extracted = extract_name_and_company(resume_text, jd_text)
-            filename = make_filename(extracted["candidate_name"], extracted["company_name"])
+            filename = make_filename(
+                extracted["candidate_name"], extracted["company_name"]
+            )
             save_as_docx(letter, filename)
 
     else:

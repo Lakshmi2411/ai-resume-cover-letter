@@ -44,18 +44,15 @@ def generate_cover_letter(resume_text, jd_text, temperature=0.7):
         f"Job Description:\n{jd_text}\n\nResume:\n{resume_text}"
     )
 
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json"
-    }
+    headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
     payload = {
         "model": "llama-3.3-70b-versatile",
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_prompt}
+            {"role": "user", "content": user_prompt},
         ],
-        "temperature": temperature
+        "temperature": temperature,
         # Note: no response_format/json mode here, we WANT free-form prose
     }
 
@@ -81,18 +78,15 @@ If either cannot be found, use "Unknown" as the value."""
 
     user_prompt = f"Resume:\n{resume_text}\n\nJob Description:\n{jd_text}"
 
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json"
-    }
+    headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
     payload = {
         "model": "llama-3.3-70b-versatile",
         "messages": [
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
+            {"role": "user", "content": user_prompt},
         ],
         "temperature": temperature,
-        "response_format": {"type": "json_object"}
+        "response_format": {"type": "json_object"},
     }
 
     response = requests.post(URL, headers=headers, json=payload)

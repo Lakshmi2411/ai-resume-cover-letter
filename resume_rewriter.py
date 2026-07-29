@@ -44,17 +44,14 @@ def rewrite_resume(resume_text, jd_text, temperature=0.4):
         f"following the strict rules above."
     )
 
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json"
-    }
+    headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
     payload = {
         "model": "llama-3.3-70b-versatile",
         "messages": [
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_prompt}
+            {"role": "user", "content": user_prompt},
         ],
-        "temperature": temperature
+        "temperature": temperature,
     }
 
     response = requests.post(URL, headers=headers, json=payload)
@@ -97,5 +94,7 @@ if __name__ == "__main__":
     print(updated_resume)
 
     extracted = extract_name_and_company(resume_text, jd_text)
-    filename = make_resume_filename(extracted["candidate_name"], extracted["company_name"])
+    filename = make_resume_filename(
+        extracted["candidate_name"], extracted["company_name"]
+    )
     save_resume_as_docx(updated_resume, filename)
